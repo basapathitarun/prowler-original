@@ -183,23 +183,23 @@ def prowler():
     #     parse_checks_from_folder(audit_info, checks_folder, provider)
 
     # Exclude checks if -e/--excluded-checks
-    if excluded_checks:
-        print('excluded_checks\n')
-        checks_to_execute = exclude_checks_to_run(checks_to_execute, excluded_checks)
+    # if excluded_checks:
+    #     print('excluded_checks\n')
+    #     checks_to_execute = exclude_checks_to_run(checks_to_execute, excluded_checks)
 
     # Exclude services if --excluded-services
-    if excluded_services:
-        print('excluded_services\n')
-        checks_to_execute = exclude_services_to_run(
-            checks_to_execute, excluded_services, provider
-        )
+    # if excluded_services:
+    #     print('excluded_services\n')
+    #     checks_to_execute = exclude_services_to_run(
+    #         checks_to_execute, excluded_services, provider
+    #     )
 
     # Once the audit_info is set and we have the eventual checks based on the resource identifier,
     # it is time to check what Prowler's checks are going to be executed
-    if audit_info.audit_resources:
-        print('audit_info.audit_resources\n')
-        checks_from_resources = set_provider_execution_parameters(provider, audit_info)
-        checks_to_execute = checks_to_execute.intersection(checks_from_resources)
+    # if audit_info.audit_resources:
+    #     print('audit_info.audit_resources\n')
+    #     checks_from_resources = set_provider_execution_parameters(provider, audit_info)
+    #     checks_to_execute = checks_to_execute.intersection(checks_from_resources)
 
     # Sort final check list
     checks_to_execute = sorted(checks_to_execute)
