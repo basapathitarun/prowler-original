@@ -81,7 +81,7 @@ def prowler():
         print(f"{_}\n")
 
     
-    if not args.no_:banner:
+    if not args.no_banner:
         print_banner(args)
 
     # We treat the compliance framework as another output format
