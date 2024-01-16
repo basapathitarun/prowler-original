@@ -24,6 +24,7 @@ def load_checks_to_execute(
 ) -> set:
     """Generate the list of checks to execute based on the cloud provider and the input arguments given"""
     try:
+        print('load_checks_to_execute\n')
         # Local subsets
         checks_to_execute = set()
         check_aliases = {}
