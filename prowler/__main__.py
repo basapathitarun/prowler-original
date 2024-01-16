@@ -128,7 +128,7 @@ def prowler():
         bulk_compliance_frameworks, bulk_checks_metadata
     )
     # Update checks metadata if the --custom-checks-metadata-file is present
-    # custom_checks_metadata = None
+    custom_checks_metadata = None
     # if custom_checks_metadata_file:
     #     print('custom_checks_metadata')
     #     custom_checks_metadata = parse_custom_checks_metadata_file(
