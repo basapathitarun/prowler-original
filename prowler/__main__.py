@@ -5,6 +5,7 @@ import os
 import sys
 
 from colorama import Fore, Style
+from prowler.config.config import available_compliance_frameworks
 
 from prowler.lib.banner import print_banner
 from prowler.lib.check.check import (
@@ -70,7 +71,8 @@ def prowler():
     checks_file = args.checks_file
     checks_folder = args.checks_folder
     severities = args.severity
-    compliance_framework = args.compliance
+    # compliance_framework = args.compliance
+    compliance_framework = available_compliance_frameworks
     custom_checks_metadata_file = args.custom_checks_metadata_file
 
     if not args.no_banner:
