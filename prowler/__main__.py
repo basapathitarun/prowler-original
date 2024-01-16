@@ -5,7 +5,7 @@ import os
 import sys
 
 from colorama import Fore, Style
-from prowler.config.config import available_compliance_frameworks
+# from prowler.config.config import available_compliance_frameworks
 
 from prowler.lib.banner import print_banner
 from prowler.lib.check.check import (
