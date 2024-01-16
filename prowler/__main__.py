@@ -75,7 +75,11 @@ def prowler():
     compliance_framework = ['cis_1.4_aws']
     custom_checks_metadata_file = args.custom_checks_metadata_file
 
-    if not args.no_banner:
+    
+    print("args :\n")
+    for _ in args:
+        print(f"{_}\n")
+    if not args.no_:banner:
         print_banner(args)
 
     # We treat the compliance framework as another output format
