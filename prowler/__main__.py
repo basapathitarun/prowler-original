@@ -76,7 +76,7 @@ def prowler():
     custom_checks_metadata_file = args.custom_checks_metadata_file
 
     
-    print("args :{args}\n")
+    print(f"args :{args}\n")
     
 
     
