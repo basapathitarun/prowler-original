@@ -76,9 +76,8 @@ def prowler():
     custom_checks_metadata_file = args.custom_checks_metadata_file
 
     
-    print("args :\n")
-    for _ in args:
-        print(f"{_}\n")
+    print("args :{args}\n")
+    
 
     
     if not args.no_banner:
