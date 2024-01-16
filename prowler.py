@@ -2,7 +2,8 @@
 
 import sys
 
-from prowler.__main__ import prowler
+from prowler.__main__ import prowler-original
+
 
 if __name__ == "__main__":
     sys.exit(prowler())
