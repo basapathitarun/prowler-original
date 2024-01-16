@@ -48,6 +48,7 @@ def bulk_load_checks_metadata(provider: str) -> dict:
 def bulk_load_compliance_frameworks(provider: str) -> dict:
     """Bulk load all compliance frameworks specification into a dict"""
     try:
+        print("bulk_load_compliance_frameworks\n")
         bulk_compliance_frameworks = {}
         available_compliance_framework_modules = list_compliance_modules()
         for compliance_framework in available_compliance_framework_modules:
@@ -425,6 +426,7 @@ def execute_checks(
     audit_output_options: Provider_Output_Options,
     custom_checks_metadata: Any,
 ) -> list:
+    print('execute_checks\n')
     # List to store all the check's findings
     all_findings = []
     # Services and checks executed for the Audit Status
@@ -543,6 +545,7 @@ def execute(
     checks_executed: set,
     custom_checks_metadata: Any,
 ):
+    print('execute\n')
     # Import check module
     check_module_path = (
         f"prowler.providers.{provider}.services.{service}.{check_name}.{check_name}"
