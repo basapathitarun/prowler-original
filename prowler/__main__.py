@@ -79,6 +79,8 @@ def prowler():
     print("args :\n")
     for _ in args:
         print(f"{_}\n")
+
+    
     if not args.no_:banner:
         print_banner(args)
 
