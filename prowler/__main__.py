@@ -128,26 +128,26 @@ def prowler():
         bulk_compliance_frameworks, bulk_checks_metadata
     )
     # Update checks metadata if the --custom-checks-metadata-file is present
-    custom_checks_metadata = None
-    if custom_checks_metadata_file:
-        print('custom_checks_metadata')
-        custom_checks_metadata = parse_custom_checks_metadata_file(
-            provider, custom_checks_metadata_file
-        )
-        bulk_checks_metadata = update_checks_metadata(
-            bulk_checks_metadata, custom_checks_metadata
-        )
+    # custom_checks_metadata = None
+    # if custom_checks_metadata_file:
+    #     print('custom_checks_metadata')
+    #     custom_checks_metadata = parse_custom_checks_metadata_file(
+    #         provider, custom_checks_metadata_file
+    #     )
+    #     bulk_checks_metadata = update_checks_metadata(
+    #         bulk_checks_metadata, custom_checks_metadata
+    #     )
 
-    if args.list_compliance:
-        print('args.list_compliance\n')
-        print_compliance_frameworks(bulk_compliance_frameworks)
-        sys.exit()
-    if args.list_compliance_requirements:
-        print('args.list_compliance_requirements\n')
-        print_compliance_requirements(
-            bulk_compliance_frameworks, args.list_compliance_requirements
-        )
-        sys.exit()
+    # if args.list_compliance:
+    #     print('args.list_compliance\n')
+    #     print_compliance_frameworks(bulk_compliance_frameworks)
+    #     sys.exit()
+    # if args.list_compliance_requirements:
+    #     print('args.list_compliance_requirements\n')
+    #     print_compliance_requirements(
+    #         bulk_compliance_frameworks, args.list_compliance_requirements
+    #     )
+    #     sys.exit()
 
     # Load checks to execute
     checks_to_execute = load_checks_to_execute(
@@ -162,25 +162,25 @@ def prowler():
         provider,
     )
 
-    # if --list-checks-json, dump a json file and exit
-    if args.list_checks_json:
-        print('args.list_checks_json\n')
-        print(list_checks_json(provider, sorted(checks_to_execute)))
-        sys.exit()
+    # # if --list-checks-json, dump a json file and exit
+    # if args.list_checks_json:
+    #     print('args.list_checks_json\n')
+    #     print(list_checks_json(provider, sorted(checks_to_execute)))
+    #     sys.exit()
 
-    # If -l/--list-checks passed as argument, print checks to execute and quit
-    if args.list_checks:
-        print('args.list_checks\n')
-        print_checks(provider, sorted(checks_to_execute), bulk_checks_metadata)
-        sys.exit()
+    # # If -l/--list-checks passed as argument, print checks to execute and quit
+    # if args.list_checks:
+    #     print('args.list_checks\n')
+    #     print_checks(provider, sorted(checks_to_execute), bulk_checks_metadata)
+    #     sys.exit()
 
     # Set the audit info based on the selected provider
     audit_info = set_provider_audit_info(provider, args.__dict__)
 
     # Import custom checks from folder
-    if checks_folder:
-        print('checks_folder\n')
-        parse_checks_from_folder(audit_info, checks_folder, provider)
+    # if checks_folder:
+    #     print('checks_folder\n')
+    #     parse_checks_from_folder(audit_info, checks_folder, provider)
 
     # Exclude checks if -e/--excluded-checks
     if excluded_checks:
