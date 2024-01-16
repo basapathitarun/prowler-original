@@ -72,7 +72,7 @@ def prowler():
     checks_folder = args.checks_folder
     severities = args.severity
     # compliance_framework = args.compliance
-    compliance_framework = available_compliance_frameworks
+    compliance_framework = ['cis_1.4_aws']
     custom_checks_metadata_file = args.custom_checks_metadata_file
 
     if not args.no_banner:
