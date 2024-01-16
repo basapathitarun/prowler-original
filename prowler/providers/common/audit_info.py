@@ -368,6 +368,7 @@ def set_provider_audit_info(provider: str, arguments: dict):
     set_provider_audit_info configures automatically the audit session based on the selected provider and returns the audit_info object.
     """
     try:
+        print('set_provider_audit_info\n')
         provider_set_audit_info = f"set_{provider}_audit_info"
         provider_audit_info = getattr(Audit_Info(), provider_set_audit_info)(arguments)
 
