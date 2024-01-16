@@ -15,6 +15,7 @@ def set_provider_output_options(
     set_provider_output_options configures automatically the outputs based on the selected provider and returns the Provider_Output_Options object.
     """
     try:
+        print('set_provider_output_options\n')
         # Dynamically load the Provider_Output_Options class
         provider_output_class = f"{provider.capitalize()}_Output_Options"
         provider_output_options = getattr(
